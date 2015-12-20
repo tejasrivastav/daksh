@@ -118,21 +118,39 @@ div {
   display: inline-block;
 }
 
+.topContainer {
+  width: 100%;
+  display: flex;
+    flex-direction: row;
+}
+
+.asterPlot {
+  width: 33%;
+  background-color: #f2f2f3;
+  padding: 1.5em;
+  position: relative;
+  margin: .5em;
+  display: flex;
+    flex-direction: column;
+}
+
 .treemap {
-  position: absolute;
-  top: 5%;
-  left: 40%;
+  width: 66%;
+  background-color: #f2f2f3;
+  padding: 1.5em;
+  margin: .5em;   
 }
 
 #hearing {
-  display: block;
-  left: 0;
-  position: absolute;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .hearing_legend {
   position: absolute;
-  top: 65%;
+  bottom: .3rem;
+  left: .3rem;
 }
 
 .hearing_legend span{

@@ -1,6 +1,6 @@
 var margin = {top: 20, right: 0, bottom: 0, left: 0},
-    width = 720,
-    height = 375 - margin.top - margin.bottom,
+    width = $("#casetype").width(),
+    height = width/2,
     formatNumber = d3.format(",d"),
     transitioning;
 
@@ -19,10 +19,8 @@ var treemap = d3.layout.treemap()
     .round(false);
 
 var svg = d3.select("#casetype").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.bottom + margin.top)
-    .style("margin-left", -margin.left + "px")
-    .style("margin.right", -margin.right + "px")
+    .attr("width", width)
+    .attr("height", height)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
     .style("shape-rendering", "crispEdges");
@@ -167,7 +165,6 @@ grandparent.append("text")
   function myFunction() {
     $(".depth").click(function(d){
        /*console.log(d);*/
-       console.log(d.srcElement.__data__.name);
        renderAster(d.srcElement.__data__.name);
     });
   }
